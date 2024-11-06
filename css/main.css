@@ -1,0 +1,81 @@
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../img/bg_min.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    padding: 16px;
+}
+
+.main::before{
+    content: "";
+    opacity: .25;
+    position: absolute;
+    inset: 0;
+    background-color: #000;
+}
+
+.main>* { z-index: 1;}
+
+h1 {
+    font-size: 64px;
+    text-shadow: -3px -1px 1px #000;
+    flex-basis: 100%;
+}
+
+.main>div {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 32px;
+}
+
+.main div.car {
+    height: 192px;
+    /* width: 192px; */
+    width: 192px;
+    background-color: #ffffff40;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    border: solid #ffffff60 4px;
+}
+
+.main div.car p {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+    padding: 16px 8px 8px;
+    font-weight: bold;
+    background-image: linear-gradient(180deg, transparent 0%, #000000c0 16px);
+    word-break: keep-all;
+}
+
+.main div.car p span:nth-child(1) {
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+.main div.car p span:nth-child(2) {
+    font-weight: lighter;
+}
+
+.main div.car img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: top left;
+    transform: scaleX(-1);
+}
