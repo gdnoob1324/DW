@@ -35,5 +35,7 @@ window.onload = function () {
 async function getCarImg(name) {
     const response = await fetch('https://drive-world.fandom.com/api.php?action=imageserving&wisTitle='+ name +'&format=json&origin=*');
     const jsonData = await response.json();
-    return jsonData['image']['imageserving'];
+    const text = jsonData['image']['imageserving'];
+    const indexOfPng = text.indexOf('.png');
+    return text.substring(0, indexOfPng + 4);
 }
