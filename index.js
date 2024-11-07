@@ -33,6 +33,7 @@ function setupCars() {
 }
 
 function RefreshCars() {
+    const mainElement = document.querySelector('.main');
     mainElement.querySelector('div.buying').innerHTML = '';
     mainElement.querySelector('div.selling').innerHTML = '';
     setupCars();
