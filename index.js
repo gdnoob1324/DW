@@ -18,7 +18,7 @@ window.onload = function () {
         const newDiv = document.createElement('div');
         newDiv.classList.add('car');
         const newImg = document.createElement('img');
-        getCarImg(text).then(e => newImg.src = e);
+        getCarImg(text).then(e => newImg.src = e == undefined ? '' : e);
         newDiv.appendChild(newImg);
         const newP = document.createElement('p');
         newP.innerHTML = object[text][1] + ' <span>' + text + '</span> <span>-</span> ' + object[text][0];
