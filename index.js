@@ -47,11 +47,15 @@ window.onload = function () {
 };
 
 async function getCarImg_old(name) {
-    const response = await fetch('https://drive-world.fandom.com/api.php?action=imageserving&wisTitle=' + name + '&format=json&origin=*');
+    try {
+        const response = await fetch('https://drive-world.fandom.com/api.php?action=imageserving&wisTitle=' + name + '&format=json&origin=*');
     const jsonData = await response.json();
     const text = jsonData['image']['imageserving'];
     const indexOfPng = text.indexOf('.png');
     return text.substring(0, indexOfPng + 4);
+    } catch (error) {
+        return '';
+    }
 }
 
 async function getCarImg(name) {
