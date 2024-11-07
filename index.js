@@ -21,6 +21,7 @@ function setupCars() {
         const newDiv = document.createElement('div');
         newDiv.classList.add('car');
         const newImg = document.createElement('img');
+        newImg.loading = 'lazy';
         getCarImg(text).then(e => newImg.src = e == undefined ? '' : e);
         newDiv.appendChild(newImg);
         const newP = document.createElement('p');
