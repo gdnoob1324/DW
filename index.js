@@ -64,7 +64,7 @@ try {
         .then(response => response.json()).then(data => {
             const text = data['image']['imageserving'];
             return text.substring(0, text.indexOf('.png') + 4) + 'scale-to-width-down/384';
-        }).catch(error => {return '';});
+        }).catch(error => { return ''; });
 } catch (error) {
         return '';
     }
