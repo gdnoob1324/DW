@@ -63,7 +63,7 @@ try {
     return await fetch('https://drive-world.fandom.com/api.php?action=imageserving&wisTitle=' + name + '&format=json&origin=*')
         .then(response => response.json()).then(data => {
             const text = data['image']['imageserving'];
-            return text.substring(0, text.indexOf('.png') + 4); // + '/revision/latest/scale-to-width-down/500';
+            return text.substring(0, text.indexOf('.png') + 4) + '?format=original';
         }).catch(error => { return ''; });
 } catch (error) {
         return '';
