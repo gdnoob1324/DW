@@ -11,7 +11,7 @@ let listBuying = [
     { 'Crescendo': ['1m', 'fs'] },
 ]
 
-window.onload = function () {
+function setupCars() {
     const mainElement = document.querySelector('.main');
     function createAndAppendElement(object, buying) {
         const text = Object.keys(object)[0];
@@ -30,6 +30,16 @@ window.onload = function () {
 
       listSelling.forEach(element => createAndAppendElement(element, false));
       listBuying.forEach(element => createAndAppendElement(element, true));
+}
+
+function RefreshCars() {
+    mainElement.querySelector('div.buying').innerHTML = '';
+    mainElement.querySelector('div.selling').innerHTML = '';
+    setupCars();
+}
+
+window.onload = function () {
+    setupCars();
 };
 
 async function getCarImg_old(name) {
