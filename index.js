@@ -1,5 +1,8 @@
 let listSelling = [
     { 'Zeta Roadster': ['250m', 'fm'] },
+    { 'Tiger1': ['10m', 'fm'] },
+    { 'Edler': ['90m', 'fm'] },
+    { 'Innovation 37': ['5m', 'fm'] },
 ]
 
 let listBuying = [
