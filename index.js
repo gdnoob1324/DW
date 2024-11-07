@@ -32,10 +32,20 @@ window.onload = function () {
       listBuying.forEach(element => createAndAppendElement(element, true));
 };
 
-async function getCarImg(name) {
+async function getCarImg_old(name) {
     const response = await fetch('https://drive-world.fandom.com/api.php?action=imageserving&wisTitle='+ name +'&format=json&origin=*');
     const jsonData = await response.json();
     const text = jsonData['image']['imageserving'];
     const indexOfPng = text.indexOf('.png');
     return text.substring(0, indexOfPng + 4);
+}
+
+async function getCarImg(name) {
+  await fetch('https://drive-world.fandom.com/api.php?action=imageserving&wisTitle=' + name + '&format=json&origin=*')
+    .then(response => response.json()).then(data => {
+      const text = data['image']['imageserving'];
+      return text.substring(0, text.indexOf('.png') + 4);
+    }).catch(error => {
+        return '';
+    });
 }
