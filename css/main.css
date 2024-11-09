@@ -32,6 +32,16 @@ h1 {
     border-bottom: solid #ffffff80 2px;
     padding-bottom: 4px;
     cursor: pointer;
+    position: relative;
+}
+
+h1::after {
+    content: 'Click to toggle';
+    text-shadow: -2px -1px 1px #000;
+    margin-left: 8px;
+    font-size: medium;
+    position: absolute;
+    bottom: 4px;
 }
 
 .main>div {
