@@ -30,6 +30,7 @@ h1 {
     text-shadow: -3px -1px 1px #000;
     flex-basis: 100%;
     border-bottom: solid #ffffff80 2px;
+    padding-bottom: 4px;
     cursor: pointer;
 }
 
