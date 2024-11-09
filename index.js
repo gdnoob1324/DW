@@ -47,10 +47,10 @@ window.onload = function () {
     setupCars();
 
     $($('h1')[0]).click(()=> {
-        $('div.selling').slideToggle("");
+        $('div.selling').slideToggle('fast');
     });
     $($('h1')[1]).click(()=> {
-        $('div.buying').slideToggle("");
+        $('div.buying').slideToggle('fast');
     });
 };
 
