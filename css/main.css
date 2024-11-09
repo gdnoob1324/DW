@@ -29,6 +29,8 @@ h1 {
     font-size: 64px;
     text-shadow: -3px -1px 1px #000;
     flex-basis: 100%;
+    border-bottom: solid #ffffff80 2px;
+    cursor: pointer;
 }
 
 .main>div {
@@ -42,7 +44,6 @@ h1 {
 
 .main div.car {
     height: 192px;
-    /* width: 192px; */
     width: 192px;
     background-color: #ffffff40;
     border-radius: 12px;
@@ -61,11 +62,6 @@ h1 {
     font-weight: bold;
     background-image: linear-gradient(180deg, transparent 0%, #000000c0 16px);
     word-break: keep-all;
-    transition: all .1s ease-in;
-}
-
-.main div.car:hover p {
-    bottom: -62px;
 }
 
 .main div.car p span:nth-child(1) {
@@ -83,7 +79,7 @@ h1 {
     object-fit: cover;
     object-position: top left;
     transform: scaleX(-1);
-    transition: all .1s ease-in;
+    transition: transform .1s ease-in;
 }
 
 .main div.car:hover img {

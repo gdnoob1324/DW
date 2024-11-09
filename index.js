@@ -45,6 +45,13 @@ function RefreshCars() {
 
 window.onload = function () {
     setupCars();
+
+    $($('h1')[0]).click(()=> {
+        $('div.selling').slideToggle("");
+    });
+    $($('h1')[1]).click(()=> {
+        $('div.buying').slideToggle("");
+    });
 };
 
 async function getCarImg_old(name) {
